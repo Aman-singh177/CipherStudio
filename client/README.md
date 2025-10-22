@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# CipherStudio Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This folder contains the frontend part of the CipherStudio project.  
+The goal of this app is to provide a simple browser-based coding environment where users can write, edit, and preview code in real time.  
+It connects with the backend API to save and load projects from the database.
 
-## Available Scripts
+## Features
+Create, delete, and organize files and folders.
+Write React components with live syntax highlighting.
+Preview project output in real time.
+Save and load projects through the backend using a project ID. 
 
-In the project directory, you can run:
+## Tech Stack
+Frontend Framework: React.js 
+Code Editor: Sandpack Editor (from CodeSandbox) 
+Styling: CSS (you can add TailwindCSS if desired) 
+State Management: React hooks and custom context for project data 
+API Calls: Axios to connect with the backend
 
-### `npm start`
+## Folder Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. The frontend is organized to keep code modular and easy to maintain.
+2. The src folder contains all application logic:
+3. components holds reusable UI components like the code editor, preview pane, file explorer, and header bar with save/load buttons.
+4.  contains main page components, including the IDE/home page.
+5. hooks contains custom React hooks for managing project state and editor logic.
+6. services contains functions to call the backend API for saving and loading projects.
+7. context (if used) holds global state for project data across the app.
+8. App.js is the main component that combines everything and sets up the layout.
+9. styles.css contains basic styles for the interface.
+The public folder contains static assets needed for the app.
+package.json lists all dependencies and scripts to run the frontend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+Clone the repository and navigate to the frontend folder:
+git clone https://github.com/<your-username>/cipherstudio.git
+cd cipherstudio/frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open your browser and go to:
+http://localhost:3000
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usage Notes
+The live preview shows the output of code written in the editor, including console.log outputs.
+Use the "Save" button to store your current project to the backend.
+Use the "Load" button to retrieve previously saved projects.
+The UI is minimal to keep coding as the focus.
+Ensure that Sandpack is installed. If not, install it manually:
+npm install @codesandbox/sandpack-react
